@@ -88,7 +88,11 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password
 select user, host, plugin from user; # should show | root | localhost | mysql_native_password |
 ```
 
-confirm 
+## ssh-keygen
+
+run `ssh-keygen` and set up github ssh key.
+
+
 
 
 
