@@ -74,7 +74,21 @@ npm -v   # 10.2.3
 sudo apt install phpmyadmin
 ```
 
+This doesn't work. Switch to HeidiSQL for client.
 
+Change Mysql `auth_plugin` to `mysql_native_password@ and set root password.
+```sh
+sudo mysql
+use mysql;
+select user, host, plugin from user; # should show | root | localhost | auth_socket |
+
+# from auth_socket to mysql_native_password
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+
+select user, host, plugin from user; # should show | root | localhost | mysql_native_password |
+```
+
+confirm 
 
 
 
