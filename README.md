@@ -83,7 +83,7 @@ use mysql;
 select user, host, plugin from user; # should show | root | localhost | auth_socket |
 
 # from auth_socket to mysql_native_password
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 
 select user, host, plugin from user; # should show | root | localhost | mysql_native_password |
 ```
