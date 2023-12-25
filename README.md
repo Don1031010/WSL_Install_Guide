@@ -46,4 +46,35 @@ sudo a2enconf php8.3-fpm
 sudo service apache2 restart
 ```
 
+## Install Composer
+
+Download instructions at [getcomposer.org](https://getcomposer.org/download/)
+
+```sh
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'e21205b207c3ff031906575712edab6f13eb0b361f2085f1f1237b7126d785e826a450292b6cfd1d64d92e6563bbde02') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+```
+Move and rename `composer.phar` to `~/.local/bin/composer` (create ~/.local directory if not exists).
+
+## Installing Node with nvm
+
+Github [instructions](https://github.com/nvm-sh/nvm)
+
+```sh
+nvm install --lts
+node -v  # v20.10.0
+npm -v   # 10.2.3
+```
+
+## Installing phpMyAdmin
+
+```sh
+sudo apt install phpmyadmin
+```
+
+
+
+
 
