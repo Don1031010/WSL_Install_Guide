@@ -92,7 +92,14 @@ select user, host, plugin from user; # should show | root | localhost | mysql_na
 
 run `ssh-keygen` and set up github ssh key.
 
+## set default php version to 8.3
 
+```sh
+sudo update-alternatives --set php /usr/bin/php8.3
+
+ls -l /usr/bin/php*
+php -v
+```
 
 
 
