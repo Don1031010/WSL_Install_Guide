@@ -43,6 +43,10 @@ sudo apt install php8.3-fpm
 # On Apache: Enable PHP 8.3 FPM
 sudo a2enconf php8.3-fpm
 
+# install php curl and xml extensions
+sudo apt install php8.3-curl
+sudp apt install php8.3-xml
+
 sudo service apache2 restart
 ```
 
@@ -101,5 +105,14 @@ ls -l /usr/bin/php*
 php -v
 ```
 
+## install php8.3-mysql
+
+```sh
+php -m | grep mysql
+sudo apt install php8.3-mysql
+
+sudo service apache2 restart
+sudo service mysql restart
+```
 
 
