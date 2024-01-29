@@ -46,7 +46,9 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_password';
 
 Restore `mysql.cnf` and restart mysql.
 
+### Turn off foreign key check
 
+`SET FOREIGN_KEY_CHECKS = 0;` and `SET FOREIGN_KEY_CHECKS = 1;`.
 ## Installing PHP 8.3
 
 Following php.watch's artical [How to install or upgrade to PHP 8.3 on Ubuntu and Debian](https://php.watch/articles/php-8.3-install-upgrade-on-debian-ubuntu#php83-ubuntu-quick)
