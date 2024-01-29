@@ -26,6 +26,27 @@ sudo apt install mysql-server
 sudo service mysql start
 sudo mysql
 ```
+
+### setting password for root@localhost
+
+Add following to `/etc/mysql/mysql.cnf`.
+
+```sh
+[mysqld]
+skip-grant-tables
+```
+
+```sh
+sudo mysql
+
+flush privileges;
+use mysql;
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_password';
+```
+
+Restore `mysql.cnf` and restart mysql.
+
+
 ## Installing PHP 8.3
 
 Following php.watch's artical [How to install or upgrade to PHP 8.3 on Ubuntu and Debian](https://php.watch/articles/php-8.3-install-upgrade-on-debian-ubuntu#php83-ubuntu-quick)
