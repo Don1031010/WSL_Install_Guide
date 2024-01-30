@@ -49,6 +49,16 @@ Restore `mysql.cnf` and restart mysql.
 ### Turn off foreign key check
 
 `SET FOREIGN_KEY_CHECKS = 0;` and `SET FOREIGN_KEY_CHECKS = 1;`.
+
+### import sql files
+
+```sh
+sed -i 's/ef0o7/53wvm/g' ef0o7_tdnet.sql
+
+ mysql --init-command="SET SESSION FOREIGN_KEY_CHECKS=0;" -u 53wvm_dong -p -h mysql60.conoha.ne.jp 53wvm_tdnet < ef0o7_tdnet.sql
+```
+
+
 ## Installing PHP 8.3
 
 Following php.watch's artical [How to install or upgrade to PHP 8.3 on Ubuntu and Debian](https://php.watch/articles/php-8.3-install-upgrade-on-debian-ubuntu#php83-ubuntu-quick)
